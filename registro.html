@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Especialistas - ConectaPro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="images//logo.png" alt="ConectaPro Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="services.html">Servicios</a></li>
+                    <li><a href="registro.html">Registro</a></li>
+                    <li><a href="about.html">Sobre Nosotros</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>Registro de Especialistas</h2>
+            <form id="specialist-form">
+                <div class="form-group">
+                    <label for="name">Nombre completo:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="specialty">Especialidad:</label>
+                    <select id="specialty" name="specialty" required>
+                        <option value="">Seleccione una especialidad</option>
+                        <option value="plomeria">Plomería</option>
+                        <option value="electricidad">Electricidad</option>
+                        <option value="carpinteria">Carpintería</option>
+                        <option value="Jardinería y paisajismo">Jardinería y paisajismo</option>
+                        <option value="Limpieza profesional">Limpieza profesional</option>
+                        <option value="Reparación de electrodomésticos">Reparación de electrodomésticos</option>
+                        <option value="Diseño de interiores">Diseño de interiores</option>
+                        <option value="Albañilería">Albañilería</option>
+                        <option value="Cerrajería">Cerrajería</option>
+                        <option value="Instalación de sistemas de seguridad">Instalación de sistemas de seguridad</option>
+                        <option value="Tapicería">Tapicería</option>
+                        <option value="Mantenimiento de piscinas">Mantenimiento de piscinas</option>
+                        <option value="Reparación de techos">Reparación de techos</option>
+                        <option value="Instalación de aire acondicionado">Instalación de aire acondicionado</option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Años de experiencia:</label>
+                    <input type="number" id="experience" name="experience" required min="0">
+                </div>
+                <div class="form-group">
+                    <label for="description">Descripción de servicios:</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono de contacto:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="submit" class="btn">Registrarse</button>
+            </form>
+        </div>
+
+        <h2>Especialistas Destacados</h2>
+        <div class="specialists">
+            <div class="specialist-card">
+                <img src="/images/JuanPerez.png" alt="Juan Pérez">
+                <h3>Juan Pérez</h3>
+                <p>Plomero</p>
+                <p>Experiencia: 10 años</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>(4.5)</span>
+                </div>
+            </div>
+            <div class="specialist-card">
+                <img src="/images/MariaGomez.png" alt="María Gómez">
+                <h3>María Gómez</h3>
+                <p>Electricista</p>
+                <p>Experiencia: 8 años</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(4.0)</span>
+                </div>
+            </div>
+            <div class="specialist-card">
+                <img src="/images/CarlosRodriguez.jpg" alt="Carlos Rodríguez">
+                <h3>Carlos Rodríguez</h3>
+                <p>Carpintero</p>
+                <p>Experiencia: 15 años</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>(5.0)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

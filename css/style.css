@@ -93,7 +93,8 @@ header nav ul li a:hover {
     margin-bottom: 30px;
 }
 
-.hero .btn {
+.btn {
+    display: inline-block;
     background: #e74c3c;
     color: #fff;
     padding: 10px 20px;
@@ -101,47 +102,52 @@ header nav ul li a:hover {
     border-radius: 5px;
     font-size: 1em;
     transition: background 0.3s;
+    border: none;
+    cursor: pointer;
 }
 
-.hero .btn:hover {
+.btn:hover {
     background: #c0392b;
 }
 
-.services {
+.services, .testimonials, .about, .contact {
     padding: 40px 0;
+}
+
+.services, .contact {
     background: #ecf0f1;
 }
 
-.services h2 {
+.services h2, .testimonials h2, .about h2, .contact h2 {
     text-align: center;
     margin-bottom: 40px;
     font-size: 2.5em;
     color: #2c3e50;
 }
 
-.service-card {
+.service-card, .specialist-card {
     background: #fff;
-    padding: 20px;
-    margin: 20px;
+    padding: 50px;
+    margin: 50px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.service-card:hover {
+.service-card:hover, .specialist-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.service-card img {
-    width: 70%;
+.service-card img, .specialist-card img {
+    width: 80%;
     height: 300px;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.service-card h3 {
+.service-card h3, .specialist-card h3 {
     margin: 15px 0;
     color: #2c3e50;
 }
@@ -150,15 +156,22 @@ header nav ul li a:hover {
     color: #7f8c8d;
 }
 
-.testimonials {
-    padding: 40px 0;
+.specialists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -15px;
 }
 
-.testimonials h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2.5em;
-    color: #2c3e50;
+.specialist-card {
+    flex: 0 1 calc(33.333% - 30px);
+    margin: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.specialist-card .rating {
+    color: #ffd700;
 }
 
 .testimonial {
@@ -181,17 +194,6 @@ header nav ul li a:hover {
     color: #2c3e50;
 }
 
-.about {
-    padding: 40px 0;
-}
-
-.about h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2.5em;
-    color: #2c3e50;
-}
-
 .about p {
     margin-bottom: 20px;
     color: #7f8c8d;
@@ -202,18 +204,6 @@ header nav ul li a:hover {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.contact {
-    padding: 40px 0;
-    background: #ecf0f1;
-}
-
-.contact h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2.5em;
-    color: #2c3e50;
 }
 
 .contact-info {
@@ -235,40 +225,38 @@ header nav ul li a:hover {
     color: #7f8c8d;
 }
 
-.contact-form {
+.form-container, .contact-form {
     background: #fff;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.contact-form label {
+.form-container {
+    margin-top: 20px;
+}
+
+.form-container h2 {
+    color: #424fca;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
     display: block;
     margin-bottom: 5px;
     color: #2c3e50;
 }
 
-.contact-form input,
-.contact-form textarea {
+.form-group input,
+.form-group select,
+.form-group textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
+    padding: 8px;
     border: 1px solid #bdc3c7;
-    border-radius: 5px;
-}
-
-.contact-form .btn {
-    background: #e74c3c;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.contact-form .btn:hover {
-    background: #c0392b;
+    border-radius: 4px;
 }
 
 footer {
@@ -294,6 +282,9 @@ footer .social-media a:hover img {
 }
 
 @media (max-width: 768px) {
+    .specialist-card {
+        flex: 0 1 100%;
+    }
     header nav ul {
         flex-direction: column;
     }
@@ -302,7 +293,8 @@ footer .social-media a:hover img {
         flex-direction: column;
     }
 
-    .service-card {
+    .service-card, .specialist-card {
         margin: 20px 0;
+        width: 100%;
     }
 }
