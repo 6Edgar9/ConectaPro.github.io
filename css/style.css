@@ -163,15 +163,47 @@ header nav ul li a:hover {
     margin: -15px;
 }
 
+.specialists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
 .specialist-card {
-    flex: 0 1 calc(33.333% - 30px);
-    margin: 15px;
-    padding: 20px;
-    box-sizing: border-box;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
 .specialist-card .rating {
     color: #ffd700;
+}
+
+.specialist-card:hover {
+    transform: translateY(-5px);
+}
+
+.specialist-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.specialist-card h3 {
+    margin: 15px 0 5px;
+    color: #2c3e50;
+}
+
+.specialist-card p {
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+.specialist-card .rating {
+    color: #f1c40f;
+    margin-bottom: 15px;
 }
 
 .testimonial {
